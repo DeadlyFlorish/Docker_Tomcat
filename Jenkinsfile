@@ -10,6 +10,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
+                snykSecurity(
+                    snykInstallation: snyk
+                    snykTokenId: snyk
+                    severity: low
+                )    
             }
         }
         stage('Deploy') {
