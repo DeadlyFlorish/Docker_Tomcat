@@ -11,9 +11,9 @@ pipeline {
             steps {
                 echo 'Testing...'
                 snykSecurity(
-                    snykInstallation: snyk,
-                    snykTokenId: snyk,
-                    severity: low
+                    snykInstallation: 'snyk',
+                    snykTokenId: 'snyk',
+                    severity: 'low'
                 )    
             }
         }
